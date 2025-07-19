@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('CS42H1RC77UDN9PKLI20');
+  ttq.page();
+}(window, document, 'ttq');
+{
+    "event_source": "web",
+    "event_source_id": "CS42H1RC77UDN9PKLI20",
+    "data": [
+        {
+            "event": "CompletePayment",
+            "event_time": "946684800000",
+            "user": {},
+            "properties": {
+                "contents": [
+                    {}
+                ]
+            }
+        }
+    ]
+}
+
+</script>
+<!-- TikTok Pixel Code End -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Conteúdos - Ju Souza</title>
+    <style>
+	
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cabeçalho com informações do perfil */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-details {
+            margin-bottom: 10px;
+        }
+
+        .profile-details h1 {
+            font-size: 24px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .profile-details p {
+            margin: 5px 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .stats div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Botão de Chamada de Vídeo */
+        .follow-button {
+            background-color: #ff0066;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .follow-button:hover {
+            background-color: #e6005c;
+        }
+
+        /* Texto "Sala privada" no lugar das redes sociais */
+        .social-text {
+            text-align: center;
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Grade de conteúdos */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .content-grid div {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Altura fixa para uniformizar os containers */
+            overflow: hidden;
+        }
+
+        .content-grid img, .content-grid video {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover; /* Ajusta a imagem/vídeo dentro do container */
+            cursor: pointer;
+        }
+
+        /* Visualização de conteúdo em tela cheia */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fullscreen img, .fullscreen video {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Contador de visualizações */
+        .view-count {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 8px;
+            font-size: 12px;
+            border-radius: 10px;
+        }
+
+        /* Texto e botão adicionais abaixo da grade */
+        .extra-content {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .extra-content p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .extra-button {
+            background-color: #ff0066;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .extra-button:hover {
+            background-color: #e6005c;
+        }
+
+        /* Estilos do popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: black;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .popup-content img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .popup-content button {
+            background-color: #ff0066;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .popup-content button:hover {
+            background-color: #e6005c;
+        }
+
+        .popup-content a {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Popup de verificação de idade -->
+    <div class="popup" id="ageVerificationPopup">
+        <div class="popup-content">
+            <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/foto+perifl.jpg" alt="Avatar">
+            <h2>Você quer conhecer os meus conteúdos?</h2>
+            <p>Clique abaixo por favor para continuar, caso você tenha +18 anos</p>
+            <button onclick="closePopup()">Sim, eu quero</button>
+            <a href="#" onclick="closePopup()">Ainda não tenho 18 anos</a>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="container" id="mainContent">
+        <!-- Cabeçalho do perfil -->
+        <div class="profile-header">
+            <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/foto+perifl.jpg" alt="Avatar">
+            <div class="profile-details">
+                <h1>Carolinaandrade <span>💖</span></h1>
+                <p>@privydacarol 💋</p>
+            </div>
+            <div class="stats">
+                <div>
+                    <strong>418</strong>
+                    <span>Vídeos</span>
+                </div>
+                <div>
+                    <strong>55.8K</strong>
+                    <span>Seguidores</span>
+                </div>
+                <div>
+                    <strong>3.1M</strong>
+                    <span>Views</span>
+                </div>
+            </div>
+            <p>LEIA COM ATENÇÃO!<br>
+               🔒 Posto TODOS OS DIAS para quem compra meus conteúdos<br>
+               👀 (conteúdo hétero/lésbico: vídeos fudendo bem gostoso, anal, me exibindo, masturbando, chupando e levando gozada na cara)<br>
+               😈 Essa semana estou fazendo promo nos meus conteúdos, quer ver tudo no sigilo? Clique aqui 👇</p>
+            <button class="follow-button" onclick="window.location.href='';">Quero ver tudo</button>
+
+            <!-- Texto substituindo as redes sociais -->
+            <div class="social-text">Conteúdo🔞Sem censura </div>
+        </div>
+
+        <!-- Grade de Conteúdos 1 -->
+        <div class="content-grid">
+            <!-- Conteúdos da grade (12 no total) -->
+            <!-- O mesmo conteúdo que estava antes, incluindo vídeos e imagens -->
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/1.png" alt="Conteúdo 1" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">28.6K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/2.png" alt="Conteúdo 2" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">19.3K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/3.png"
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/3.png" alt="Conteúdo 3" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">17.3K</span>
+            </div>
+            <div>
+                <video muted autoplay loop onclick="openFullscreen(this, 'video')">
+                    <source src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/1.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <span class="view-count">23.5K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/4.png" alt="Conteúdo 5" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">19.9K</span>
+            </div>
+            <div>
+                <video muted autoplay loop onclick="openFullscreen(this, 'video')">
+                    <source src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/2.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <span class="view-count">44.7K</span>
+            </div>
+
+            <!-- Novos conteúdos adicionados -->
+            <div>
+                <video muted autoplay loop onclick="openFullscreen(this, 'video')">
+                    <source src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/3.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <span class="view-count">34.3K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/5.png" alt="Conteúdo 8" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">18.4K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/6.png" alt="Conteúdo 9" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">15.1K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/7.png" alt="Conteúdo 10" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">13.6K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/8.png" alt="Conteúdo 11" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">26.9K</span>
+            </div>
+            <div>
+                <img src="https://freecfmodelo.s3.us-east-005.backblazeb2.com/9.png" alt="Conteúdo 12" onclick="openFullscreen(this, 'image')">
+                <span class="view-count">44.3K</span>
+            </div>
+        </div>
+
+        <!-- Texto adicional e botão abaixo da grade -->
+        <div class="extra-content">
+            <p>Gostou amor? Imagina tudo isso só para você, clique aqui 👇</p>
+            <button class="extra-button" onclick="window.location.href='';">Saiba Mais</button>
+            <p>© 2024 - Todos os direitos reservados.</p>
+        </div>
+
+    </div>
+
+    <!-- Script para exibir o conteúdo em tela cheia -->
+    <script>
+        function openFullscreen(element, type) {
+            // Criar a div de visualização em tela cheia
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.classList.add('fullscreen');
+            
+            if (type === 'image') {
+                const img = document.createElement('img');
+                img.src = element.src;
+                fullscreenDiv.appendChild(img);
+
+                // Fechar após 3 segundos se for uma imagem
+                setTimeout(() => {
+                    document.body.removeChild(fullscreenDiv);
+                }, 3000); // 3 segundos para imagens
+            } else if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = element.querySelector('source').src;
+                video.controls = true;
+                video.autoplay = true;
+                fullscreenDiv.appendChild(video);
+
+                // Fechar após o vídeo terminar
+                video.onended = function() {
+                    document.body.removeChild(fullscreenDiv);
+                };
+            }
+
+            // Adicionar a visualização em tela cheia ao body
+            document.body.appendChild(fullscreenDiv);
+        }
+
+        // Script para controlar o popup de verificação de idade
+        function closePopup() {
+            document.getElementById('ageVerificationPopup').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block'; // Mostrar o conteúdo principal
+        }
+
+        // Mostrar o popup ao carregar a página
+        window.onload = function() {
+            document.getElementById('ageVerificationPopup').style.display = 'flex';
+            document.getElementById('mainContent').style.display = 'none'; // Ocultar o conteúdo principal
+        };
+    </script>
+
+</body>
+</html>
